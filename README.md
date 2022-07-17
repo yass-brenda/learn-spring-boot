@@ -36,8 +36,9 @@ Mvnw para ejecutar en linux
 Mvnw para ejecutar en windows
 
 Para __correr en la terminal usa:__
+```
 mvn spring-boot:run
-
+```
 
 ### Estructuras de archivos
 __/Controllers:__ Punto inicial, recibe la petición y ejecuta la lógica principal. 
