@@ -5,15 +5,16 @@
 ### Spring Inicializr
 
 **Project:** 
-Maven o gradle ayudan para empaquetar,gestionar y compilar las dependencias.
-Maven es para un principiante.
+Maven o gradle ayudan para empaquetar, gestionar y compilar las dependencias.
+Maven Descarga dependencias y compila el proyecto .
 
 **Version:** 
 Elegir la que venga por defecto porque es la más actual.
 
 **Group:** 
-Es un ejemplo de tu pagina siempre viene invertido
-Ejemplo : com.brenda -> brenda.com
+Es un ejemplo de tu pagina siempre viene invertido.
+
+_Ejemplo: com.brenda -> brenda.com_
 
 **Artifact:** 
 Nombre del proyecto a nivel de clase.
@@ -29,13 +30,13 @@ War para aplicaciones web.
 ### Estructura de un proyecto
 **POM:**
 EL pom dice que dependencias debes descargar.
-El proyecto ya tre integrado tomcat que hace que corra un servidor web 
+El proyecto ya trae integrado tomcat que hace que corra un servidor web 
 
 **Mvnw:**
 Mvnw para ejecutar en linux
 Mvnw para ejecutar en windows
 
-Para __correr en la terminal usa:__
+Para __ejecutar en la terminal usa:__
 ```
 mvn spring-boot:run
 ```

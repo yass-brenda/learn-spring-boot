@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/v1/books
+### Filtro de verbo y ruta
+GET http://localhost:8080/api/v1/books?nombre=loquesea&author=luis
+### Filtro de verbo y ruta
+POST http://localhost:8080/api/v1/books/default
+
+### Filtro de verbo y ruta
+POST http://localhost:8080/api/v1/books?n=2&m=10
+
+### Filtro de verbo y ruta
+GET http://localhost:8080/index
