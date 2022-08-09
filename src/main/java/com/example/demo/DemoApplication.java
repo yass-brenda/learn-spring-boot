@@ -6,9 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 @SpringBootApplication
@@ -23,8 +26,8 @@ public class DemoApplication {
 
 
 	@GetMapping("/index2")
-	public String[] hola(){
-		String[] array = {"a","b","c","d"};
+	public ArrayList<Integer> hola(){
+		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4));
 		return array;
 	}
 
