@@ -12,44 +12,25 @@ import java.lang.reflect.Parameter;
 import java.util.Map;
 
 @SpringBootApplication
-@Controller
+@RestController
 @RequestMapping("/")
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		// Lo que hace spring internamente
-		Class clase = DemoApplication.class;
-		Method [] arr = clase.getMethods();
-		for(Method m :  arr){
-			System.out.println(m.getName());
-			for (Parameter p : m.getParameters()){
-				try {
-					DemoApplication d = new
-							DemoApplication();
-					System.out.println((DemoApplication.class.getMethod("bookDefault",String.class).invoke(d,"brenda")));
-				} catch (NoSuchMethodException e) {
-					e.printStackTrace();
-				} catch (IllegalAccessException e) {
-					e.printStackTrace();
-				} catch (InvocationTargetException e) {
-					e.printStackTrace();
-				}
-				System.out.println();
-
-			}
-		}
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
 
-	@GetMapping("/index")
-	public String hola(){
-		return "index";
+	@GetMapping("/index2")
+	public String[] hola(){
+		String[] array = {"a","b","c","d"};
+		return array;
 	}
 
-	@PostMapping("/api/v1/books")
-	public String hola2(){
-		return "libro guardado";
+	@GetMapping("/api/v1/books")
+	public int hola2(){
+		return 7;
 	}
 
 	@PostMapping("/api/v1/books/default")
