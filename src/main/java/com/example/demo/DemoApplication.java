@@ -3,6 +3,7 @@ package com.example.demo;
 import jdk.dynalink.Operation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 @SpringBootApplication
-@RestController
+@Controller
 @RequestMapping("/")
 public class DemoApplication {
 
@@ -26,7 +27,7 @@ public class DemoApplication {
 
 
 	@GetMapping("/index2")
-	public ArrayList<Integer> hola(){
+	public @ResponseBody ArrayList<Integer> hola(){
 		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4));
 		return array;
 	}
