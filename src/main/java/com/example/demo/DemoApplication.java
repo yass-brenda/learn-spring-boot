@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 @SpringBootApplication
-@Controller
+@RestController
 @RequestMapping("/")
 public class DemoApplication {
 
@@ -33,12 +33,12 @@ public class DemoApplication {
 	}
 
 	@GetMapping("/api/v1/books")
-	public int hola2(){
-		return 7;
+	public Integer hola2(@RequestParam(value = "cantidad",defaultValue = "1") Integer numero){
+		return 1 + numero;
 	}
 
-	@PostMapping("/api/v1/books/default")
-	public String bookDefault(String name){
+	@GetMapping("/api/v1/books/default") // Para cuando no se tenha idea que parametros vienen da todos en una sola variable
+	public Map<String,String> bookDefault(@RequestParam Map<String,String> name){
 		System.out.println("Es el valor del name"+ name);
 		return name;
 	}
